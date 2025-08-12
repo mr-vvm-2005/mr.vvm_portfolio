@@ -452,6 +452,89 @@ function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+// Resume Download Function
+function downloadResume() {
+    const resumeContent = `
+VETRIVEL MURUGAN P
+Aspiring Full Stack Developer
+
+CONTACT INFORMATION
+Email: pkvetrivelvvm@gmail.com
+Phone: +91 7598611585
+Location: Tenkasi, Tamil Nadu, India
+LinkedIn: https://www.linkedin.com/in/mrvvmoffical2005
+GitHub: https://github.com/mr-vvm-2005
+Instagram: https://www.instagram.com/mr.vvm_official
+
+PROFESSIONAL SUMMARY
+Aspiring Full Stack Developer currently pursuing B.Tech in Information Technology while simultaneously enhancing practical skills through the comprehensive NxtWave CCBP 4.0 Full Stack Program. Gained hands-on experience during internship at IPCS Global, Tirunelveli, working on real-world full stack development projects. Passionate about creating innovative web solutions that solve real-world problems.
+
+EDUCATION
+• B.Tech Information Technology (2023 – 2027)
+  Dr. Sivanthi Aditanar College of Engineering
+  Focus: Software development, database management, and system design
+
+• NxtWave CCBP 4.0 Full Stack Program (2023 – 2026)
+  NxtWave Academy
+  Comprehensive full stack development program covering modern web technologies
+
+• Higher Secondary Education (Completed 2023)
+  Shriram Vidhalaya Hr. Sec. School, Tenkasi
+  Strong foundation in mathematics and computer science
+
+TECHNICAL SKILLS
+• Programming Languages: HTML5 (90%), CSS3 (85%), JavaScript (80%), Python (85%), SQL (70%)
+• Frameworks & Libraries: ReactJS (75%)
+• Specialized Skills: AI Website Creation (80%), Portfolio Design (85%), Video Editing (75%), Photography (70%)
+• Development: Full Stack Web Development, Responsive Design, Database Management
+
+PROFESSIONAL EXPERIENCE
+Full Stack Development Intern
+IPCS Global, Tirunelveli
+• Gained hands-on experience in full stack web development
+• Worked on real-world projects and collaborated with experienced developers
+• Contributed to both frontend and backend development tasks
+• Enhanced practical skills in modern web technologies
+
+CERTIFICATIONS
+• Python (Basic) - HackerRank
+• Introduction to Databases - CCBP
+• Build a Static Website - CCBP
+• Build Your Own Responsive Website - CCBP
+• Elements of AI - University of Helsinki (2 ECTS credits)
+• Software Engineer Job Simulation - Forage
+
+PERSONAL INFORMATION
+Date of Birth: 11.09.2005
+Nationality: Indian
+Languages: Tamil, English
+
+INTERESTS
+• Web Development & Programming
+• Artificial Intelligence & Machine Learning
+• Photography & Video Editing
+• Technology Innovation
+• Continuous Learning
+
+---
+Generated on ${new Date().toLocaleDateString()}
+    `.trim();
+
+    // Create and download the file
+    const blob = new Blob([resumeContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Vetrivel_Murugan_P_Resume.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
+
+    // Show success message
+    showFormMessage('Resume downloaded successfully!', 'success');
+}
+
 // Additional interactive features
 
 // Parallax effect for hero section
