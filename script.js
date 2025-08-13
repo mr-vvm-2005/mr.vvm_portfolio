@@ -17,6 +17,16 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollReveal();
 });
 
+// Loading Screen
+function initLoadingScreen() {
+    const loadingScreen = document.querySelector('.loading-screen');
+    if (loadingScreen) {
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 2000); // Show loading for 2 seconds
+    }
+}
+
 // Custom Cursor
 function initCustomCursor() {
     if (window.innerWidth > 768) {
