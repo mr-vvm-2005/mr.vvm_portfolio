@@ -435,24 +435,6 @@ function showFormMessage(message, type) {
     }, 5000);
 }
 
-// Loading animation
-function initLoadingAnimation() {
-    const loading = document.createElement('div');
-    loading.className = 'loading';
-    loading.innerHTML = '<div class="spinner"></div>';
-    document.body.appendChild(loading);
-    
-    // Hide loading screen after page loads
-    window.addEventListener('load', function() {
-        setTimeout(() => {
-            loading.classList.add('hidden');
-            setTimeout(() => {
-                loading.remove();
-            }, 500);
-        }, 1000);
-    });
-}
-
 // Utility function to capitalize first letter
 function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
