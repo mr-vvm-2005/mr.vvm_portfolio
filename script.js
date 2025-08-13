@@ -1,5 +1,8 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize loading screen first
+    initLoadingScreen();
+    
     // Initialize all functionality
     initCustomCursor();
     initNavigation();
@@ -7,8 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initSkillsAnimation();
     initContactForm();
     initSmoothScrolling();
-    initLoadingAnimation();
     initTouchAnimations();
+    initParticles();
+    initTypingEffect();
+    initKineticText();
+    initScrollReveal();
 });
 
 // Custom Cursor

@@ -12,6 +12,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Loading Animation -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="logo-text">Mr.vvm</span>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-line"></div>
+            </div>
+            <p class="loading-text">Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
     <!-- Header Navigation -->
     <header class="header">
         <nav class="navbar">
@@ -43,9 +59,9 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-title">
-                        Hi, I'm <a href="https://www.linkedin.com/in/mrvvmoffical2005" target="_blank" class="profile-name-link"><span class="highlight">Vetrivel Murugan P</span></a>
+                        <span class="typing-text">Hi, I'm </span><a href="https://www.linkedin.com/in/mrvvmoffical2005" target="_blank" class="profile-name-link"><span class="highlight animated-gradient">Vetrivel Murugan P</span></a>
                     </h1>
-                    <h2 class="hero-subtitle">Aspiring Full Stack Developer</h2>
+                    <h2 class="hero-subtitle kinetic-text">Aspiring Full Stack Developer</h2>
                     <p class="hero-description">
                         B.Tech IT Student passionate about creating innovative web solutions 
                         and building the future of technology, one line of code at a time.
@@ -53,7 +69,7 @@
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-primary">Get In Touch</a>
                         <a href="#about" class="btn btn-secondary">Learn More</a>
-                        <button onclick="downloadResume()" class="btn btn-resume">
+                        <button type="button" onclick="downloadResume()" class="btn btn-resume">
                             <i class="fas fa-download"></i> Download Resume
                         </button>
                     </div>
